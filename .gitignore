@@ -1,0 +1,5 @@
+time_images/
+config.py
+*.session
+*.session-journal
+__pycache__
