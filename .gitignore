@@ -1,5 +1,6 @@
 time_images/
-config.py
+.env
 *.session
 *.session-journal
 __pycache__
+venv

@@ -1,11 +1,15 @@
+import os
+
 from telethon import TelegramClient, sync
-from config import *
+from dotenv import load_dotenv
 
 from telethon.tl.functions.photos import UploadProfilePhotoRequest, DeletePhotosRequest
 from datetime import datetime
 from utils import *
 
-client = TelegramClient("timeavatar", api_id, api_hash)
+load_dotenv()
+
+client = TelegramClient("timeavatar", os.getenv('api_id'), os.getenv('api_hash'))
 client.start()
 
 prev_update_time = ""
