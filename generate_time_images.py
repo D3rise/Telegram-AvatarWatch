@@ -1,10 +1,18 @@
-from utils import *
+import os
+from datetime import datetime, timedelta
+
 import cv2
 import numpy as np
-from datetime import datetime, timedelta
+
+from utils import *
 
 start_time = datetime.strptime("2019-06-21", "%Y-%m-%d")  # Можете выбрать любую дату
 end_time = start_time + timedelta(days=1)
+
+
+if not os.path.exists("time_images/"):
+    os.mkdir("time_images")
+
 
 def get_black_background():
     return np.zeros((500, 500))
